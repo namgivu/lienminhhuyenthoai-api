@@ -1,8 +1,8 @@
-const express = require("express");
+const express    = require("express");
 const bodyParser = require("body-parser");
 
-const HttpError = require("./model/http-error");
 const userHomeRoute = require("./route/user-home");
+
 
 const PORT = 5000 || process.env.PORT;
 
@@ -12,11 +12,8 @@ app.use(bodyParser.json());
 
 //API for bypass CORS
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
+  res.header("Access-Control-Allow-Origin",  "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept"  );
   next();
 });
 
