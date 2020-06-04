@@ -1,5 +1,6 @@
 const express    = require("express");
 const bodyParser = require("body-parser");
+const HttpError  = require("./model/http-error");  //TODO Kien unused const
 
 const userHomeRoute = require("./route/user-home");
 
@@ -19,8 +20,9 @@ app.use((req, res, next) => {
 
 //Routes
 app.use("/", userHomeRoute);
+//TODO Kien add /hello/:name here
 
-//Error Handler: Receive any error respone from any routes. Then respone this error to client via json
+//Error Handler: Receive any error respone from any routes. Then respone this error to client via json  //TODO Kien typo respond
 app.use((error, req, res, next) => {
   if (res.headerSent) {
     return next(error);
