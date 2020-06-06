@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 
 const userHomeRoute = require("./route/user-home");
+const helloRoute = require("./route/hello");
 
 const PORT = 5000 || process.env.PORT;
 
@@ -21,6 +22,7 @@ app.use((req, res, next) => {
 
 //Routes
 app.use("/", userHomeRoute);
+app.use("/hello", helloRoute);
 //TODO Kien add /hello/:name here
 
 //Error Handler: Receive any error respond from any routes. Then respond this error to client via json
