@@ -1,6 +1,7 @@
 const express = require("express");
+const appRoot = require("app-root-path");
 
-const homeController = require("../controller/homeController");  //TODO Kien please use absolute path
+const homeController = require(appRoot + "/controller/homeController");
 
 const router = express.Router();
 
