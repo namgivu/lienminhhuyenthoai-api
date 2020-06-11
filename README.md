@@ -6,6 +6,6 @@ We have the `web app` running at :lienminhhuyenthoai, so this repo is to play th
 
 npm install
 
-# run app
+# run app in development
 
-nodemon app.js
+yarn start

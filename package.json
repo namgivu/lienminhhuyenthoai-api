@@ -4,7 +4,8 @@
   "description": "We have the `web app` running at :lienminhhuyenthoai, so this repo is to play the role of the `api app` for it",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
